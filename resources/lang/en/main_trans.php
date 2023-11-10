@@ -14,4 +14,6 @@ return [
     'Name_Programer' => 'Abdullah Hamada Software Eng All Rights Reserved',
     'Jobs_list'=>'Jobs List',
     'Jobs'=>'Jobs',
+    'avaliable_jobs'=> 'Available Jobs',
+
 ];

@@ -31,4 +31,5 @@ return [
     'job_seeker'=>'Job Seeker',
     'employment_type'=>'employment type',
     'status'=>'status', 
+    'avaliable_jobs'=> 'Available Jobs',
 ];
