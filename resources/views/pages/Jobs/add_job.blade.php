@@ -2,7 +2,7 @@
 @section('css')
     @toastr_css
 @section('title')
-    {{trans('Jobs_trans.add_Job')}}
+{{ trans('main_trans.Main_title') }} | {{trans('Jobs_trans.add_Job')}}
 @stop
 @endsection
 @section('page-header')
@@ -72,8 +72,8 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>{{trans('Jobs_trans.employment_type')}} : <span class="text-danger">*</span></label>
-                                    <select name="employment_type" class="form-control">
-                                        <option value="#">الرجاء الاختيار</option>
+                                    <select name="employment_type" class="custom-select">
+                                        <option value="#" selected disabled>الرجاء الاختيار</option>
                                         <option value="full-time">Full-time</option>
                                         <option value="part-time">Part-time</option>
                                         <option value="Contract">Contract</option>
@@ -86,8 +86,8 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>{{trans('Jobs_trans.status')}} : <span class="text-danger">*</span></label>
-                                    <select name="status" class="form-control">
-                                        <option value="#">الرجاء الاختيار</option>
+                                    <select name="status" class="custom-select">
+                                        <option value="#" selected disabled>الرجاء الاختيار</option>
                                         <option value="open">Open</option>
                                         <option value="closed">Closed</option>
                                     </select>

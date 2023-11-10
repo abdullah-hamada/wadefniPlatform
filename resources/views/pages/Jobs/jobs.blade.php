@@ -2,7 +2,7 @@
 @section('css')
     @toastr_css
 @section('title')
-    {{ trans('Jobs_trans.title_page') }}
+{{ trans('main_trans.Main_title') }} | {{ trans('Jobs_trans.title_page') }}
 @stop
 @endsection
 @section('page-header')
