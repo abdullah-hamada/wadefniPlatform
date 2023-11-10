@@ -31,4 +31,9 @@ class Job extends Model
         return $this->hasMany(Application::class);
     }
 
+    public function scopeAvaliable($query)
+    {
+        $query->where('status', '=', 'open');
+    }
+
 }
