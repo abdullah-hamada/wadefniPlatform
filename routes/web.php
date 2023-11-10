@@ -40,6 +40,7 @@ Route::group(
 
     Route::group(['namespace' => 'Jobs'], function () {
         Route::resource('Jobs', 'JobController');
+        Route::get('/available-jobs', 'JobController@availableJobs')->name('jobs.available');
     });
 
     Route::group(['namespace' => 'Applications'], function () {
