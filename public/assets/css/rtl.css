@@ -7494,7 +7494,7 @@ a.text-dark:hover {
   color: #1d2124 !important; }
 
 .text-muted {
-  color: #6c757d !important; }
+  color: #28a745 !important }
 
 .text-hide {
   font: 0/0 a;
@@ -21273,7 +21273,7 @@ ul.list-unstyled li {
   .side-menu-fixed .side-menu-bg {
     height: 100%;
     width: 100%;
-    background: #282a39; }
+    background: #fff; }
   .side-menu-fixed .side-menu {
     border: none;
     height: auto;
@@ -21281,7 +21281,7 @@ ul.list-unstyled li {
     position: relative;
     border-radius: 0;
     margin: 0;
-    background-color: #282a39;
+    background-color: #fff;
     backface-visibility: hidden;
     padding-top: 20px; }
     .side-menu-fixed .side-menu li {
@@ -21316,7 +21316,7 @@ ul.list-unstyled li {
       -o-transition: all 0.3s ease;
       transition: all 0.3s ease;
       display: block;
-      color: rgba(255, 255, 255, 0.7);
+      color: rgb(40, 167, 69);
       padding: 12px 20px 12px 15px;
       font-size: 13px; }
       .side-menu-fixed .side-menu li a .pull-left {
@@ -21340,16 +21340,16 @@ ul.list-unstyled li {
           line-height: 20px;
           font-size: 10px; }
       .side-menu-fixed .side-menu li a:hover {
-        background: rgba(0, 0, 0, 0.2);
-        color: #ffffff; }
+        background: rgb(40, 167, 69);
+        color: #FFF; }
       .side-menu-fixed .side-menu li a:focus {
-        background: rgba(0, 0, 0, 0.2);
+        background: rgb(40, 167, 69);
         color: #ffffff; }
       .side-menu-fixed .side-menu li a:active {
-        background: rgba(0, 0, 0, 0.2);
+        background: rgb(40, 167, 69);
         color: #ffffff; }
     .side-menu-fixed .side-menu li.active > a {
-      background: rgba(0, 0, 0, 0.2);
+      background: rgb(40, 167, 69);
       color: #ffffff; }
 
 .side-menu-fixed .side-menu li ul.collapse li.active a {
@@ -21362,18 +21362,18 @@ ul.list-unstyled li {
 .side-menu-fixed .side-menu li ul li a {
   padding: 7px 50px 7px 15px;
   display: block;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgb(40, 167, 69);;
   font-size: 12px;
   font-weight: 300; }
   .side-menu-fixed .side-menu li ul li a:hover {
-    background: rgba(0, 0, 0, 0.3);
-    color: #ffffff; }
+    background: rgb(40, 167, 69);
+    color: #fff; }
   .side-menu-fixed .side-menu li ul li a:focus {
-    background: rgba(0, 0, 0, 0.3);
-    color: #ffffff; }
+    background: rgb(40, 167, 69);
+    color: #fff3cd; }
   .side-menu-fixed .side-menu li ul li a:active {
-    background: rgba(0, 0, 0, 0.3);
-    color: #ffffff; }
+    background: rgb(40, 167, 69);
+    color: #fff; }
 
 .side-menu-fixed .side-menu li.active a .pull-right i {
   color: #ffffff; }
