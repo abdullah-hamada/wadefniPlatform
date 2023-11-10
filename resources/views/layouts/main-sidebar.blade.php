@@ -37,6 +37,7 @@
                         </a>
                         <ul id="Jobs-menu" class="collapse" data-parent="#sidebarnav">
                             <li><a href="{{route('Jobs.index')}}">{{trans('main_trans.Jobs_list')}}</a></li>
+                            <li><a href="{{route('jobs.available')}}">{{trans('main_trans.avaliable_jobs')}}</a></li>
 
                         </ul>
                     </li>
