@@ -83,6 +83,13 @@ class JobController extends Controller
 		return view('pages.Jobs.job_detail', compact('Job'));
 	}
 
+  public function availableJobs()
+	{
+    $Jobs = Job::avaliable()->get();
+    
+    return view('pages.Jobs.available_jobs',compact('Jobs'));
+	}
+
 
   /**
    * Remove the specified resource from storage.
