@@ -7,7 +7,6 @@ use App\Http\Controllers\Controller;
 use App\Models\Job;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Hash;
 
 
 class JobController extends Controller
@@ -55,15 +54,21 @@ class JobController extends Controller
     return view('pages.Jobs.edit_job',compact('Job'));
 	}
 
-  public function update($request)
+  public function update(Request $request, $id)
     {
         try {
-          
-            $Edit_Job = Job::findorfail($request);
-            $Edit_Job->name = $request->name;
-            $Edit_Job->email = $request->email;
-            $Edit_Job->password = Hash::make($request->password);
-            $Edit_Job->save();
+
+            $job = Job::findorfail($id);
+            $job->employer_id = Auth::user()->id;
+            $job->title = $request->title;
+            $job->description = $request->description;
+            $job->location = $request->location;
+            $job->salary_range = $request->salary_range;
+            $job->employment_type = $request->employment_type;
+            $job->status = $request->status;
+      
+            $job->save();
+
             toastr()->success(trans('messages.Update'));
             return redirect()->route('Jobs.index');
         } catch (\Exception $e) {
