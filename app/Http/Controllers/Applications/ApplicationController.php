@@ -11,6 +11,13 @@ use Illuminate\Support\Facades\Auth;
 
 class ApplicationController extends Controller
 {
+	public function index()
+	{
+		$Applications = Application::select('*')->with('job')->get();
+
+		return view('pages.Applications.applications',compact('Applications'));
+	}
+
 	public function create($id)
 	{
     	$Job =  Job::findOrFail($id);
@@ -40,4 +47,12 @@ class ApplicationController extends Controller
 			return redirect()->back()->withErrors(['error' => $e->getMessage()]);
 		}	
 	}
+
+	public function show($id)
+	{
+    	$Application = Application::findorfail($id)->with('job')->first();
+
+		return view('pages.Applications.application_detail', compact('Application'));
+	}
+
 }
