@@ -45,6 +45,9 @@ Route::group(
 
     Route::group(['namespace' => 'Applications'], function () {
         Route::resource('Applications', 'ApplicationController');
+        Route::get('/create/{id}', 'ApplicationController@create')->name('Applications.create');
+
+
     });
 
 });
