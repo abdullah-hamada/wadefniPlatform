@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\DB;
 
 class JobController extends Controller
 {
-    public function index()
+  public function index()
   {
       $Jobs = Job::all();
       return view('pages.Jobs.jobs',compact('Jobs'));
