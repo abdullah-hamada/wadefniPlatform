@@ -15,5 +15,7 @@ return [
     'Jobs_list'=>'Jobs List',
     'Jobs'=>'Jobs',
     'avaliable_jobs'=> 'Available Jobs',
+    'Applications_list'=>'Applications List',
+    'Applications'=>'Applications',
 
 ];

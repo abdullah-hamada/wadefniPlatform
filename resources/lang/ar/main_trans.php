@@ -15,4 +15,6 @@ return [
     'Jobs_list'=>'قائمة الوظائف',
     'Jobs'=>'الوظائف',
     'avaliable_jobs' => 'الوظائف المتاحة',
+    'Applications_list'=>'قائمة التقديمات',
+    'Applications'=>'التقديمات',
 ];
