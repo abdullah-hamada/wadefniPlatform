@@ -42,6 +42,19 @@
                         </ul>
                     </li>
 
+                    <!-- Applications-->
+                    <li>
+                        <a href="javascript:void(0);" data-toggle="collapse" data-target="#Applications-menu">
+                            <div class="pull-left"><i class="fa fa-briefcase"></i><span
+                                    class="right-nav-text">{{trans('main_trans.Applications')}}</span></div>
+                            <div class="pull-right"><i class="ti-plus"></i></div>
+                            <div class="clearfix"></div>
+                        </a>
+                        <ul id="Applications-menu" class="collapse" data-parent="#sidebarnav">
+                            <li><a href="{{route('Applications.index')}}">{{trans('main_trans.Applications_list')}}</a></li>
+                        </ul>
+                    </li>
+
                 </ul>
             </div>
         </div>
