@@ -2,13 +2,13 @@
 @section('css')
     @toastr_css
 @section('title')
-    {{ trans('Jobs_trans.title_page') }}
+    {{ trans('Applications_trans.title_page') }}
 @stop
 @endsection
 @section('page-header')
 <!-- breadcrumb -->
 @section('PageTitle')
-{{ trans('main_trans.Jobs') }}
+{{ trans('main_trans.Applications') }}
 @stop
 <!-- breadcrumb -->
 @endsection
@@ -35,10 +35,7 @@
                         @endforeach
                     </ul>
                 </div>
-            @endif
-            
-            <a href="{{route('Jobs.create')}}" class="btn btn-success btn-sm" role="button"
-                                   aria-pressed="true">{{trans('Jobs_trans.add_Job')}}</a>
+            @endif            
             <br><br>
 
             <div class="table-responsive">
@@ -48,36 +45,24 @@
                         <tr>
                             <th>#</th>
                             <th>{{ trans('Jobs_trans.title') }}</th>
-                            <th>{{ trans('Jobs_trans.location') }}</th>
-                            <th>{{ trans('Jobs_trans.employment_type') }}</th>
-                            <th>{{ trans('Jobs_trans.salary_range') }}</th>
-                            <th>{{ trans('Jobs_trans.Processes') }}</th>
+                            <th>{{ trans('Applications_trans.name') }}</th>
+                            <th>{{ trans('Applications_trans.company_name') }}</th>
+                            <th>{{ trans('Applications_trans.Processes') }}</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php $i = 0; ?>
-                        @foreach ($Jobs as $Job) 
+                        @foreach ($Applications as $Application) 
                             <tr>
                                 <?php $i++; ?>
                                 <td>{{ $i }}</td>
-                                <td>{{ $Job->title }}</td>
-                                <td>{{ $Job->location }}</td>
-                                <td>{{ $Job->employment_type }}</td>
-                                <td>{{ $Job->salary_range }}</td>
+                                <td>{{ $Application->job->title }}</td>
+                                <td>{{ $Application->applicant->name }}</td>
+                                <td>{{ $Application->job->employer->name }}</td>
                                 <td>
-                                    <div class="dropdown show">
-                                        <a class="btn btn-success btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            العمليات
-                                        </a>
-                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                            <a class="dropdown-item" href="{{route('Jobs.show',$Job->id)}}"><i style="color: #ffc107" class="far fa-eye "></i>&nbsp; {{ trans('Jobs_trans.Show') }}</a>
-                                            <a class="dropdown-item" href="{{route('Applications.create',$Job->id)}}"><i style="color:green" class="fa fa-edit"></i>&nbsp; {{ trans('Jobs_trans.Apply') }}</a>
-                                            <a class="dropdown-item" data-target="#delete{{ $Job->id }}" data-toggle="modal"><i style="color: red" class="fa fa-trash"></i>&nbsp;  {{ trans('Jobs_trans.Delete') }}</a>
-                                        </div>
-                                    </div>
+                                    <a class="dropdown-item" href="{{route('Applications.show',$Application->id)}}"><i style="color: #ffc107" class="far fa-eye "></i>&nbsp; {{ trans('Applications_trans.Show') }}</a>
                                 </td>
                             </tr>
-                            @include('pages.Jobs.delete_job')
                         @endforeach
                 </table>
             </div>

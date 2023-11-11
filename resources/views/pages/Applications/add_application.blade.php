@@ -50,7 +50,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>{{trans('Jobs_trans.posted_at')}}</label>
-                                <input value="{{ \Carbon\Carbon::parse($Job->posted_at)->diffForHumans() }}" style="color: blue" type="text" name="expires_at" class="form-control">
+                                <input value="{{ \Carbon\Carbon::parse($Job->posted_at)->diffForHumans() }}" style="color: blue" type="text" name="posted_at" class="form-control">
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -59,9 +59,6 @@
                                 <input value="{{$Job->expires_at}}"  style="color: red" type="text" name="expires_at"  class="form-control">
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                    
                     </div>
                 </div>
                 <div class="card-body">
