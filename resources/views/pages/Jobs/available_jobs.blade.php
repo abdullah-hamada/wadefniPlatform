@@ -42,16 +42,17 @@
                     @foreach($Jobs as $Job)
                     <div class="col-md-4">
                         <div class="card mb-4 box-shadow">
-                            <div class="card-body" style="height:  300px;">
+                            <div class="card-body" style="height:  250px;">
                                 <h5 class="card-title" style="text-align: center;">{{ $Job->title }}</h5>
                                 <h6 class="card-subtitle mb-2 text-muted" style=" text-align: center; ">{{ $Job->employment_type }}</h6>
                                 <p class="card-text" style="text-align: center;"><small>{{ trans('Jobs_trans.salary_range') }} : {{ $Job->salary_range }}</small></p>
-                                <p class="card-text">{{ Str::words($Job->description, 20, '...') }}</p>
-                                <p class="card-text" style=" color: red; text-align: center; ">{{ trans('Jobs_trans.expires_at') }} : {{ $Job->expires_at }}</p>
-                                <br><br>
-                                <a href="{{route('Jobs.show',$Job->id)}}" class="btn btn-success btn-block">{{ trans('Jobs_trans.Apply') }}</a>
-                                <br>
+                                <p class="card-text">{{ Str::words($Job->description, 40, '...') }}</p>
                             </div>
+                            <p class="card-text" style=" color: red; text-align: center; ">{{ trans('Jobs_trans.expires_at') }} : {{ $Job->expires_at }}</p>
+                            <br> <br>
+                            <a href="{{route('Applications.create',$Job->id)}}" class="btn btn-success btn-block mb-3">{{ trans('Jobs_trans.Apply') }}</a>
+                            <br>
+                            <br>
                         </div>
                     </div>
                     @endforeach
