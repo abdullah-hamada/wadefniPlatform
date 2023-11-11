@@ -32,4 +32,5 @@ return [
     'employment_type'=>'employment type',
     'status'=>'status', 
     'avaliable_jobs'=> 'Available Jobs',
+    'posted_at'=>'posted at',
 ];
