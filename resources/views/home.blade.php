@@ -20,7 +20,12 @@
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
                 <a class="navbar-brand" href="#!">وظفني</a>
-                <a class="btn btn-primary" href="#signup">انشاء حساب</a>
+                @if (Auth::user())
+                    <a class="btn btn-primary" href="{{ route('dashboard') }}">لوحة التحكم</a>
+                @else
+                <a class="btn btn-primary" href="{{ route('login') }}">تسجيل الدخول</a>
+
+                @endif
             </div>
         </nav>
         <!-- Masthead-->
