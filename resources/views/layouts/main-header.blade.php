@@ -107,7 +107,7 @@ header start-->
                     </div>
                 </div>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="{{ route('Users.show',Auth::user()->id ) }}"><i class="text-warning ti-user"></i>Profile</a>
+                <a class="dropdown-item" href="{{ route('users.show',Auth::user()->id ) }}"><i class="text-warning ti-user"></i>Profile</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();"><i class="text-danger ti-unlock"></i>{{ __('Sidebar_trans.Logoff') }}</a>
                  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

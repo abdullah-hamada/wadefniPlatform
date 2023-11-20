@@ -14,7 +14,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="{{ route('Users.destroy', $User->id) }}" method="POST">
+                <form action="{{ route('users.destroy', $User->id) }}" method="POST">
                     {{ method_field('Delete') }}
                     @csrf
                     {{ trans('Users_trans.Warning_User') }}

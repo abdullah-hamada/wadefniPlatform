@@ -22,7 +22,7 @@
                         <div class="tab nav-border">
                             <ul class="nav nav-tabs" role="tablist">
                                 <li class="nav-item">
-                                       <a class="nav-link active show" href="{{route('Applications.create')}}" class="btn btn-success btn-sm" role="button"
+                                       <a class="nav-link active show" href="{{route('applications.create')}}" class="btn btn-success btn-sm" role="button"
                                    aria-pressed="true">{{trans('Jobs_trans.Apply')}}</a>
                                 </li>
                             </ul>

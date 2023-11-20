@@ -13,7 +13,7 @@
                         </a>
                     </li>
                     <!-- menu title -->
-                    <li class="mt-10 mb-10 text-muted pl-4 font-medium menu-title">{{trans('main_trans.Programname')}} </li>
+                    <li class="mt-10 mb-10 text-muted pl-4 font-medium menu-title"><a href="{{route('home')}}">{{trans('main_trans.Programname')}} </a></li>
 
                     <!-- Users-->
                     <li>
@@ -23,7 +23,7 @@
                             <div class="clearfix"></div>
                         </a>
                         <ul id="Users-icon" class="collapse" data-parent="#sidebarnav">
-                            <li><a href="{{route('Users.index')}}">{{trans('main_trans.Users_list')}}</a></li>
+                            <li><a href="{{route('users.index')}}">{{trans('main_trans.Users_list')}}</a></li>
                         </ul>
                     </li>
 
@@ -36,7 +36,7 @@
                             <div class="clearfix"></div>
                         </a>
                         <ul id="Jobs-menu" class="collapse" data-parent="#sidebarnav">
-                            <li><a href="{{route('Jobs.index')}}">{{trans('main_trans.Jobs_list')}}</a></li>
+                            <li><a href="{{route('jobs.index')}}">{{trans('main_trans.Jobs_list')}}</a></li>
                             <li><a href="{{route('jobs.available')}}">{{trans('main_trans.avaliable_jobs')}}</a></li>
 
                         </ul>
@@ -51,7 +51,7 @@
                             <div class="clearfix"></div>
                         </a>
                         <ul id="Applications-menu" class="collapse" data-parent="#sidebarnav">
-                            <li><a href="{{route('Applications.index')}}">{{trans('main_trans.Applications_list')}}</a></li>
+                            <li><a href="{{route('applications.index')}}">{{trans('main_trans.Applications_list')}}</a></li>
                         </ul>
                     </li>
 

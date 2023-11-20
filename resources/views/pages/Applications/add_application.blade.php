@@ -73,7 +73,7 @@
                         </div>
                     @endif
 
-                    <form method="post"  action="{{ route('Applications.store') }}" autocomplete="off" enctype="multipart/form-data">
+                    <form method="post"  action="{{ route('applications.store') }}" autocomplete="off" enctype="multipart/form-data">
                         @csrf
                         <h6 style="font-family: 'Cairo', sans-serif;color: blue">{{trans('Applications_trans.Applications_information')}}</h6><br>
                             <div class="row">

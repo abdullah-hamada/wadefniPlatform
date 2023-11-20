@@ -60,7 +60,7 @@
                                 <td>{{ $Application->applicant->name }}</td>
                                 <td>{{ $Application->job->employer->name }}</td>
                                 <td>
-                                    <a class="dropdown-item" href="{{route('Applications.show',$Application->id)}}"><i style="color: #ffc107" class="far fa-eye "></i>&nbsp; {{ trans('Applications_trans.Show') }}</a>
+                                    <a class="dropdown-item" href="{{route('applications.show',$Application->id)}}"><i style="color: #ffc107" class="far fa-eye "></i>&nbsp; {{ trans('Applications_trans.Show') }}</a>
                                 </td>
                             </tr>
                         @endforeach

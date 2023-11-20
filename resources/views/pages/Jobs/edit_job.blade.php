@@ -29,7 +29,7 @@
                     </div>
                 @endif
 
-                    <form action="{{route('Jobs.update', $Job->id)}}" method="POST" autocomplete="off">
+                    <form action="{{route('jobs.update', $Job->id)}}" method="POST" autocomplete="off">
                         @method('PUT')
                         @csrf
                      <h6 style="font-family: 'Cairo', sans-serif;color: blue">{{trans('Jobs_trans.jobs_information')}}</h6><br>

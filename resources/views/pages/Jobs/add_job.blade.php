@@ -32,7 +32,7 @@
                     </div>
                 @endif
 
-                <form method="post"  action="{{ route('Jobs.store') }}" autocomplete="off" enctype="multipart/form-data">
+                <form method="post"  action="{{ route('jobs.store') }}" autocomplete="off" enctype="multipart/form-data">
                     @csrf
                     <h6 style="font-family: 'Cairo', sans-serif;color: blue">{{trans('Jobs_trans.jobs_information')}}</h6><br>
                         <div class="row">

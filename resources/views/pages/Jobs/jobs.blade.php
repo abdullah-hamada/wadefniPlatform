@@ -37,7 +37,7 @@
                 </div>
             @endif
             
-            <a href="{{route('Jobs.create')}}" class="btn btn-success btn-sm" role="button"
+            <a href="{{route('jobs.create')}}" class="btn btn-success btn-sm" role="button"
                                    aria-pressed="true">{{trans('Jobs_trans.add_Job')}}</a>
             <br><br>
 
@@ -76,8 +76,8 @@
                                             العمليات
                                         </a>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                            <a class="dropdown-item" href="{{route('Jobs.show',$Job->id)}}"><i style="color: #ffc107" class="far fa-eye "></i>&nbsp; {{ trans('Jobs_trans.Show') }}</a>
-                                            <a class="dropdown-item" href="{{route('Jobs.edit',$Job->id)}}"><i style="color:green" class="fa fa-edit"></i>&nbsp; {{ trans('Jobs_trans.Edit') }}</a>
+                                            <a class="dropdown-item" href="{{route('jobs.show',$Job->id)}}"><i style="color: #ffc107" class="far fa-eye "></i>&nbsp; {{ trans('Jobs_trans.Show') }}</a>
+                                            <a class="dropdown-item" href="{{route('jobs.edit',$Job->id)}}"><i style="color:green" class="fa fa-edit"></i>&nbsp; {{ trans('Jobs_trans.Edit') }}</a>
                                             <a class="dropdown-item" data-target="#delete{{ $Job->id }}" data-toggle="modal"><i style="color: red" class="fa fa-trash"></i>&nbsp;  {{ trans('Jobs_trans.Delete') }}</a>
                                         </div>
                                     </div>

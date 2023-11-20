@@ -50,7 +50,7 @@
                             </div>
                             <p class="card-text" style=" color: red; text-align: center; ">{{ trans('Jobs_trans.expires_at') }} : {{ $Job->expires_at }}</p>
                             <br> <br>
-                            <a href="{{route('Applications.create',$Job->id)}}" class="btn btn-success btn-block mb-3">{{ trans('Jobs_trans.Apply') }}</a>
+                            <a href="{{route('applications.create',$Job->id)}}" class="btn btn-success btn-block mb-3">{{ trans('Jobs_trans.Apply') }}</a>
                             <br>
                             <br>
                         </div>

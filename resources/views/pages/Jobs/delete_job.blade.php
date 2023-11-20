@@ -14,7 +14,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="{{ route('Jobs.destroy', $Job->id) }}" method="POST">
+                <form action="{{ route('jobs.destroy', $Job->id) }}" method="POST">
                     {{ method_field('Delete') }}
                     @csrf
                     {{ trans('Jobs_trans.Warning_Job') }}
