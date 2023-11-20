@@ -12,43 +12,44 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/home', 'HomeController@home')->name('home');
 
 Auth::routes();
 
-Route::group(['middleware' => ['guest']], function () {
 
-    Route::get('/', function () {
+Route::middleware(['guest'])->group(function () {
+    Route::get('/login', function () {
         return view('auth.login');
-    });
+    })->name('login');
 
+    Route::get('/register', function () {
+        return view('auth.register');
+    })->name('register');
 });
 
+Route::get('/', function () {
+    return view('home');
+})->name('home');
 
- //==============================Translate all pages============================
-Route::group(
-    [
-        'prefix' => LaravelLocalization::setLocale(),
-        'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath', 'auth']
-    ], function () {
 
-     //==============================dashboard============================
+// ==============================Translate all pages============================
+Route::group([
+    'prefix' => LaravelLocalization::setLocale(),
+    'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath', 'auth']
+], function () {
+    // ==============================dashboard============================
     Route::get('/dashboard', 'HomeController@index')->name('dashboard');
 
     Route::group(['namespace' => 'Users'], function () {
-        Route::resource('Users', 'UserController');
+        Route::resource('users', 'UserController');
     });
 
     Route::group(['namespace' => 'Jobs'], function () {
-        Route::resource('Jobs', 'JobController');
+        Route::resource('jobs', 'JobController');
         Route::get('/available-jobs', 'JobController@availableJobs')->name('jobs.available');
     });
 
     Route::group(['namespace' => 'Applications'], function () {
-        Route::resource('Applications', 'ApplicationController');
-        Route::get('/create/{id}', 'ApplicationController@create')->name('Applications.create');
-
-
+        Route::resource('applications', 'ApplicationController');
+        Route::get('/create/{id}', 'ApplicationController@create')->name('applications.create');
     });
-
 });
