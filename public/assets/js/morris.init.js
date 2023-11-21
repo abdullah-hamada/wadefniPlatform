@@ -66,7 +66,7 @@ if ($('#morris-bar').exists()) {
         gridLineColor: '#efefef',
         barSizeRatio: 0.4,
         xLabelAngle: 35,
-        barColors: ['#ffc107','#1D597D;', '#17a2b8']
+        barColors: ['#ffc107','#28a745', '#17a2b8']
     });
 }
 
