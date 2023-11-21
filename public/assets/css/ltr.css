@@ -54,7 +54,8 @@ NOTE: This file includes all admin Template plugins and Shortcodes. If you don't
   --gray-dark:#343a40;
   --primary:#1D597D;
   --secondary:#6c757d;
-  --success:#1D597D;  --info:#17a2b8;
+  --success:#1D597D;
+  --info:#17a2b8;
   --warning:#ffc107;
   --danger:#dc3545;
   --light:#f8f9fa;
@@ -1724,7 +1725,8 @@ select.form-control:focus::-ms-value {
   border-color: #1D597D; }
 
 .custom-select.is-valid:focus, .form-control.is-valid:focus, .was-validated .custom-select:valid:focus, .was-validated .form-control:valid:focus {
-  border-color: #1D597D;  box-shadow: 0 0 0 0.2rem rgba(29, 89, 125, 0.25); }
+  border-color: #1D597D;  
+  box-shadow: 0 0 0 0.2rem rgba(29, 89, 125, 0.25); }
 
 .custom-select.is-valid ~ .valid-feedback, .custom-select.is-valid ~ .valid-tooltip, .form-control.is-valid ~ .valid-feedback, .form-control.is-valid ~ .valid-tooltip, .was-validated .custom-select:valid ~ .valid-feedback, .was-validated .custom-select:valid ~ .valid-tooltip, .was-validated .form-control:valid ~ .valid-feedback, .was-validated .form-control:valid ~ .valid-tooltip {
   display: block; }
@@ -2005,11 +2007,13 @@ a.btn.disabled, fieldset:disabled a.btn {
 
 .btn-success.disabled, .btn-success:disabled {
   color: #fff;
-  background-color: #1D597D;  border-color: #83B6B9; }
+  background-color: #1D597D;  
+  border-color: #83B6B9; }
 
 .btn-success:not(:disabled):not(.disabled).active, .btn-success:not(:disabled):not(.disabled):active, .show > .btn-success.dropdown-toggle {
   color: #fff;
-  background-color: #1D597D;  border-color: #83B6B9; }
+  background-color: #1D597D;
+  border-color: #83B6B9; }
 
 .btn-success:not(:disabled):not(.disabled).active:focus, .btn-success:not(:disabled):not(.disabled):active:focus, .show > .btn-success.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.2rem rgba(29 89 125); }
@@ -2197,7 +2201,8 @@ a.btn.disabled, fieldset:disabled a.btn {
   box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.5); }
 
 .btn-outline-success {
-  color: #1D597D;  background-color: transparent;
+  color: #1D597D;  
+  background-color: transparent;
   background-image: none;
   border-color: #1D597D; }
 
@@ -2209,11 +2214,13 @@ a.btn.disabled, fieldset:disabled a.btn {
   box-shadow: 0 0 0 0.2rem rgba(29, 89, 125, 0.5); }
 
 .btn-outline-success.disabled, .btn-outline-success:disabled {
-  color: #1D597D;  background-color: transparent; }
+  color: #1D597D;  
+  background-color: transparent; }
 
 .btn-outline-success:not(:disabled):not(.disabled).active, .btn-outline-success:not(:disabled):not(.disabled):active, .show > .btn-outline-success.dropdown-toggle {
   color: #fff;
-  background-color: #1D597D;  border-color: #1D597D; }
+  background-color: #1D597D;  
+  border-color: #1D597D; }
 
 .btn-outline-success:not(:disabled):not(.disabled).active:focus, .btn-outline-success:not(:disabled):not(.disabled):active:focus, .show > .btn-outline-success.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.2rem rgba(29, 89, 125, 0.5); }
@@ -4780,10 +4787,10 @@ a.bg-secondary:focus, a.bg-secondary:hover, button.bg-secondary:focus, button.bg
   background-color: #545b62 !important; }
 
 .bg-success {
-  background-color: #1D597D; !important; }
+  background-color: #1D597D !important; }
 
 a.bg-success:focus, a.bg-success:hover, button.bg-success:focus, button.bg-success:hover {
-  background-color: #1D597D; !important; }
+  background-color: #1D597D !important; }
 
 .bg-info {
   background-color: #17a2b8 !important; }
@@ -4858,7 +4865,7 @@ a.bg-dark:focus, a.bg-dark:hover, button.bg-dark:focus, button.bg-dark:hover {
   border-color: #6c757d !important; }
 
 .border-success {
-  border-color: #1D597D; !important; }
+  border-color: #1D597D !important; }
 
 .border-info {
   border-color: #17a2b8 !important; }
@@ -6590,10 +6597,10 @@ a.text-secondary:focus, a.text-secondary:hover {
   color: #545b62 !important; }
 
 .text-success {
-  color: #1D597D; !important; }
+  color: #1D597D !important; }
 
 a.text-success:focus, a.text-success:hover {
-  color: #1D597D; !important; }
+  color: #1D597D !important; }
 
 .text-info {
   color: #17a2b8 !important; }
@@ -6626,7 +6633,7 @@ a.text-dark:focus, a.text-dark:hover {
   color: #1d2124 !important; }
 
 .text-muted {
-  color: #1D597D; !important; }
+  color: #1D597D !important; }
 
 .text-hide {
   font: 0/0 a;
@@ -21365,7 +21372,7 @@ ul.to-do li .remember-checkbox input[type=checkbox]:checked ~ label {
 
 /* Switch Success */
 .checkbox.checbox-switch.switch-success label > input:checked + span, .checkbox-inline.checbox-switch.switch-success > input:checked + span {
-  background-color: #1D597D;  border-color: #1D597D;  box-shadow: #1D597D; 0px 0px 0px 8px inset;
+  background-color: #1D597D;  border-color: #1D597D;  box-shadow: #1D597D 0px 0px 0px 8px inset;
   transition: border 0.4s ease 0s, box-shadow 0.4s ease 0s, background-color 1.2s ease 0s; }
 
 .checkbox.checbox-switch.switch-success label > input:checked:disabled + span, .checkbox-inline.checbox-switch.switch-success > input:checked:disabled + span {

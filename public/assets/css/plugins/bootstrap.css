@@ -4744,10 +4744,10 @@ a.bg-secondary:focus, a.bg-secondary:hover, button.bg-secondary:focus, button.bg
   background-color: #545b62 !important; }
 
 .bg-success {
-  background-color: #1D597D; !important; }
+  background-color: #1D597D !important; }
 
 a.bg-success:focus, a.bg-success:hover, button.bg-success:focus, button.bg-success:hover {
-  background-color: #1D597D; !important; }
+  background-color: #1D597D !important; }
 
 .bg-info {
   background-color: #17a2b8 !important; }
@@ -4822,7 +4822,7 @@ a.bg-dark:focus, a.bg-dark:hover, button.bg-dark:focus, button.bg-dark:hover {
   border-color: #6c757d !important; }
 
 .border-success {
-  border-color: #1D597D; !important; }
+  border-color: #1D597D !important; }
 
 .border-info {
   border-color: #17a2b8 !important; }
@@ -6554,10 +6554,10 @@ a.text-secondary:focus, a.text-secondary:hover {
   color: #545b62 !important; }
 
 .text-success {
-  color: #1D597D; !important; }
+  color: #1D597D !important; }
 
 a.text-success:focus, a.text-success:hover {
-  color: #1D597D; !important; }
+  color: #1D597D !important; }
 
 .text-info {
   color: #17a2b8 !important; }
