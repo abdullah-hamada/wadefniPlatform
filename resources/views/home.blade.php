@@ -7,7 +7,7 @@
         <meta name="author" content="" />
         <title>وظفني </title>
         <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="{{ URL::asset('assets/images/wadhefni-icon.png') }}"/>
         <!-- Bootstrap icons-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" type="text/css" />
         <!-- Google fonts-->
@@ -19,7 +19,9 @@
         <!-- Navigation-->
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
-                <a class="navbar-brand" href="#!">وظفني</a>
+                <a class="navbar-brand brand-logo-mini" href="#">
+                    <img src="{{ URL::asset('assets/images/wadhefni-icon.png') }}" alt="وظفني" width="50" height="50">
+                </a>
                 @if (Auth::user())
                     <a class="btn btn-primary" href="{{ route('dashboard') }}">لوحة التحكم</a>
                 @else
