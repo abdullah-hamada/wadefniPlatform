@@ -52,4 +52,9 @@ Route::group([
         Route::resource('applications', 'ApplicationController');
         Route::get('/create/{id}', 'ApplicationController@create')->name('applications.create');
     });
+
+    Route::group(['namespace' => 'Categories'], function () {
+        Route::resource('categories', 'CategoryController');
+    });
+
 });
