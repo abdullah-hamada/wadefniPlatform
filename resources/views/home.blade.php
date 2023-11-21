@@ -89,23 +89,23 @@
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-                            <div class="features-icons-icon d-flex"><i class="bi-window m-auto text-primary"></i></div>
-                            <h3>Fully Responsive</h3>
-                            <p class="lead mb-0">This theme will look great on any device, no matter the size!</p>
+                            <div class="features-icons-icon d-flex"><i class="bi-hourglass-split m-auto text-primary"></i></div>
+                            <h3>توفير الوقت والتكاليف</h3>
+                            <p class="lead mb-0">وفر المجهود والوقت الإضافي والتكاليف الناتجة عن الانتقال إلى مقر العمل يوميا</p>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-                            <div class="features-icons-icon d-flex"><i class="bi-layers m-auto text-primary"></i></div>
-                            <h3>Bootstrap 5 Ready</h3>
-                            <p class="lead mb-0">Featuring the latest build of the new Bootstrap 5 framework!</p>
+                            <div class="features-icons-icon d-flex"><i class="bi-clipboard-check m-auto text-primary"></i></div>
+                            <h3>زيادة الإنتاجية</h3>
+                            <p class="lead mb-0">ركز فقط على أدائك وإنجاز مهامك دون مواجهة أي تحديات ناتجة عن بيئة العمل</p>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="features-icons-item mx-auto mb-0 mb-lg-3">
-                            <div class="features-icons-icon d-flex"><i class="bi-terminal m-auto text-primary"></i></div>
-                            <h3>Easy to Use</h3>
-                            <p class="lead mb-0">Ready to use with your own content, or customize the source files!</p>
+                            <div class="features-icons-icon d-flex"><i class="bi-stars m-auto text-primary"></i></div>
+                            <h3>فرص عمل أفضل</h3>
+                            <p class="lead mb-0">ابحث عن الوظيفة المناسبة لمهاراتك واهتماماتك واعمل مع أفضل الشركات من مختلف الدول</p>
                         </div>
                     </div>
                 </div>
@@ -171,7 +171,9 @@
             <div class="container position-relative">
                 <div class="row justify-content-center">
                     <div class="col-xl-6">
-                        <h2 class="mb-4">Ready to get started? Sign up now!</h2>
+                        <h2 class="mb-4">ابحث عن أفضل الوظائف عن بعد في العالم العربي</h2>
+                        <div class="col-auto"><button class="btn btn-primary btn-lg" id="submitButton" type="submit">تصفح الوظائف</button></div>
+
                         <!-- Signup form-->
                         <!-- * * * * * * * * * * * * * * *-->
                         <!-- * * SB Forms Contact Form * *-->
@@ -180,7 +182,7 @@
                         <!-- To make this form functional, sign up at-->
                         <!-- https://startbootstrap.com/solution/contact-forms-->
                         <!-- to get an API token!-->
-                        <form class="form-subscribe" id="contactFormFooter" data-sb-form-api-token="API_TOKEN">
+                        {{-- <form class="form-subscribe" id="contactFormFooter" data-sb-form-api-token="API_TOKEN">
                             <!-- Email address input-->
                             <div class="row">
                                 <div class="col">
@@ -206,7 +208,7 @@
                             <!-- This is what your users will see when there is-->
                             <!-- an error submitting the form-->
                             <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
-                        </form>
+                        </form> --}}
                     </div>
                 </div>
             </div>
