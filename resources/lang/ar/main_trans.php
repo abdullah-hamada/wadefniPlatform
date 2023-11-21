@@ -17,4 +17,6 @@ return [
     'avaliable_jobs' => 'الوظائف المتاحة',
     'Applications_list'=>'قائمة التقديمات',
     'Applications'=>'التقديمات',
+    'Categories'=>'التصنيفات',
+    'Categories_list'=>'قائمة التصنيفات',
 ];
