@@ -28,7 +28,7 @@ NOTE:  This file includes jvectormap all map script. You can change anything rel
         hoverColor: false,
         markerStyle: {
           initial: {
-            fill: '#84ba3f',
+            fill: '#1D597D',
             stroke: '#FFFFFF'
           }
         },

@@ -32,8 +32,8 @@ NOTE:
                 lineWidth: 2,
                 spotRadius: 0,
                 chartRangeMax: 40,
-                lineColor: 'rgba(40, 167, 69, 0.5)',
-                fillColor: 'rgba(40, 167, 69, 0.3)',
+                lineColor: 'rgba(29, 89, 125, 0.5)',
+                fillColor: 'rgba(29, 89, 125, 0.3)',
                 composite: true,
                 highlightLineColor: 'rgba(0,0,0,.1)',
                 highlightSpotColor: 'rgba(0,0,0,.2)',
@@ -56,7 +56,7 @@ NOTE:
                 type: 'pie',
                 width: '200',
                 height: '165',
-                sliceColors: ['#84ba3f', '#dc3545', '#6c757d', '#17a2b8']
+                sliceColors: ['#1D597D', '#dc3545', '#6c757d', '#17a2b8']
             });        
             $('#sparkline4').sparkline([20, 30, 25, 40, 40, 50, 56, 37, 50], {
                 type: 'line',
@@ -77,7 +77,7 @@ NOTE:
                 lineWidth: 2,
                 spotRadius: 0,
                 chartRangeMax: 40,
-                lineColor: '#28a745',
+                lineColor: '#1D597D',
                 fillColor: 'transparent',
                 composite: true,
                 highlightLineColor: 'rgba(0,0,0,1)',

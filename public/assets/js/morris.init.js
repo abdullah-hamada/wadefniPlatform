@@ -66,7 +66,7 @@ if ($('#morris-bar').exists()) {
         gridLineColor: '#efefef',
         barSizeRatio: 0.4,
         xLabelAngle: 35,
-        barColors: ['#ffc107','#28a745', '#17a2b8']
+        barColors: ['#ffc107','#1D597D', '#17a2b8']
     });
 }
 
@@ -119,7 +119,7 @@ if ($('#morris-bar-stacked').exists()) {
             hideHover: 'auto',
             resize: true, //defaulted to true
             gridLineColor: '#efefef',
-            barColors: ['#84ba3f','#17a2b8', '#e6e6e6']
+            barColors: ['#1D597D','#17a2b8', '#e6e6e6']
         });
     }
 /*************************
@@ -163,7 +163,7 @@ if ($('#morris-donut').exists()) {
                     {label: "ELECTRICITY", value: 120}
                 ],
                 resize: true,
-                colors: ['#84ba3f', '#17a2b8', "#ffc107"]
+                colors: ['#1D597D', '#17a2b8', "#ffc107"]
             });
 }
 });

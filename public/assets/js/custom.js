@@ -193,7 +193,7 @@ var $window = $(window),
                     pieChartSize = $elem.attr('data-size') || "160",
                     pieChartAnimate = $elem.attr('data-animate') || "2000",
                     pieChartWidth = $elem.attr('data-width') || "6",
-                    pieChartColor = $elem.attr('data-color') || "#84ba3f",
+                    pieChartColor = $elem.attr('data-color') || "#1D597D",
                     pieChartTrackColor = $elem.attr('data-trackcolor') || "rgba(0,0,0,0.10)";
                 $elem.find('span, i').css({
                     'width': pieChartSize + 'px',
