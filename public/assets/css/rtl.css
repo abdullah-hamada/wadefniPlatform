@@ -48,16 +48,14 @@ NOTE: This file includes all admin Template plugins and Shortcodes. If you don't
   --red: #dc3545;
   --orange: #fd7e14;
   --yellow: #ffc107;
-  --green: #1D597D;
-  --teal: #20c997;
+  --green: #1D597D;  --teal: #20c997;
   --cyan: #17a2b8;
   --white: #fff;
   --gray: #6c757d;
   --gray-dark: #343a40;
   --primary: #1D597D;
   --secondary: #6c757d;
-  --success: #1D597D;  
-  --info: #17a2b8;
+  --success: #1D597D;  --info: #17a2b8;
   --warning: #ffc107;
   --danger: #dc3545;
   --light: #f8f9fa;
@@ -5348,13 +5346,13 @@ button.bg-secondary:hover {
   background-color: #545b62 !important; }
 
 .bg-success {
-  background-color: #1D597D !important; }
+  background-color: #1D597D; !important; }
 
 a.bg-success:focus,
 a.bg-success:hover,
 button.bg-success:focus,
 button.bg-success:hover {
-  background-color: #1D597D !important; }
+  background-color: #1D597D; !important; }
 
 .bg-info {
   background-color: #17a2b8 !important; }
@@ -5444,7 +5442,7 @@ button.bg-dark:hover {
   border-color: #6c757d !important; }
 
 .border-success {
-  border-color: #1D597D !important; }
+  border-color: #1D597D; !important; }
 
 .border-info {
   border-color: #17a2b8 !important; }
@@ -7443,11 +7441,11 @@ a.text-secondary:hover {
   color: #545b62 !important; }
 
 .text-success {
-  color: #1D597D !important; }
+  color: #1D597D; !important; }
 
 a.text-success:focus,
 a.text-success:hover {
-  color: #1D597D !important; }
+  color: #1D597D; !important; }
 
 .text-info {
   color: #17a2b8 !important; }
@@ -7485,7 +7483,7 @@ a.text-dark:hover {
   color: #1d2124 !important; }
 
 .text-muted {
-  color: #1D597D !important }
+  color: #1D597D; !important }
 
 .text-hide {
   font: 0/0 a;
@@ -22295,7 +22293,7 @@ ul.to-do li .remember-checkbox input[type=checkbox]:checked ~ label {
 
 /* Switch Success */
 .checkbox.checbox-switch.switch-success label > input:checked + span, .checkbox-inline.checbox-switch.switch-success > input:checked + span {
-  background-color: #1D597D;  border-color: #1D597D;  box-shadow: #1D597D 0px 0px 0px 8px inset;
+  background-color: #1D597D;  border-color: #1D597D;  box-shadow: #1D597D; 0px 0px 0px 8px inset;
   transition: border 0.4s ease 0s, box-shadow 0.4s ease 0s, background-color 1.2s ease 0s; }
 
 .checkbox.checbox-switch.switch-success label > input:checked:disabled + span, .checkbox-inline.checbox-switch.switch-success > input:checked:disabled + span {
