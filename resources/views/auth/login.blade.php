@@ -8,7 +8,7 @@
     <title>وظفني</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="assets/images/icon.png" />
+    <link rel="shortcut icon" href="{{ URL::asset('assets/images/wadhefni-icon.png') }}" type="image/x-icon" /> 
 
     <!-- Font -->
     <link rel="stylesheet"
