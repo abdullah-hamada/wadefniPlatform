@@ -39,7 +39,24 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        try {
+
+            $category = new Category();
+          
+            $category->name = $request->name;
+            $category->code = $request->code;
+            $category->status = $request->status;
+            $category->description = $request->description;
+
+            $category->save();
+
+            toastr()->success(trans('messages.success'));
+            return redirect()->route('categories.index');
+        }
+  
+        catch (\Exception $e){
+            return redirect()->back()->withErrors(['error' => $e->getMessage()]);
+        }
     }
 
     /**
