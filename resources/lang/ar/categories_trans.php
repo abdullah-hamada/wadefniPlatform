@@ -21,4 +21,7 @@ return [
     'Show'=>'عرض',
     'categorys_information'=>'تفاصيل التصنيف',
     'status'   => 'الحالة',
+    'active'=>'مفعل',
+    'inactive'=>'غير مفعل',
+    'please_select'=>'الرجاء الاختيار',
 ];

@@ -21,4 +21,7 @@ return [
     'Show'=>'Show',
     'categorys_information'=>'Category Information',
     'status'   => 'Status',
+    'active'=>'Active',
+    'inactive'=>'Inactive',
+    'please_select'=>'Please select',
 ];
