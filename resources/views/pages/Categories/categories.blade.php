@@ -95,7 +95,7 @@
                                         </div>
                                         <div class="modal-body">
                                             <!-- add_form -->
-                                            <form action="{{ route('categories.update', 'test') }}" method="post">
+                                            <form action="{{ route('categories.update', $category->id) }}" method="POST">
                                                 {{ method_field('patch') }}
                                                 @csrf
                                                 <div class="row">
@@ -168,7 +168,7 @@
                                             </button>
                                         </div>
                                         <div class="modal-body">
-                                            <form action="{{ route('categories.destroy', 'test') }}" method="post">
+                                            <form action="{{ route('categories.destroy', $category->id ) }}" method="POST">
                                                 {{ method_field('Delete') }}
                                                 @csrf
                                                 {{ trans('categories_trans.Warning_category') }}
