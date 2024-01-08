@@ -39,6 +39,9 @@
             <br><br>
             <div class="container">
                 <div class="row">
+                    @if ($Jobs->count() == 0)
+                    <h5>{{ trans('Jobs_trans.no_jobs') }}</h5>
+                    @endif
                     @foreach($Jobs as $Job)
                     <div class="col-md-4">
                         <div class="card mb-4 box-shadow">

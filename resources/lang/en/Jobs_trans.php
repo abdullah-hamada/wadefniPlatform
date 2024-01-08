@@ -33,4 +33,5 @@ return [
     'status'=>'status', 
     'avaliable_jobs'=> 'Available Jobs',
     'posted_at'=>'posted at',
+    'no_jobs' => 'Sorry There Are No Jobs',
 ];
