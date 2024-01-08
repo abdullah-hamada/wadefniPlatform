@@ -16,6 +16,7 @@
                     <li class="mt-10 mb-10 text-muted pl-4 font-medium menu-title"><a href="{{route('home')}}">{{trans('main_trans.Programname')}} </a></li>
 
                     <!-- Users-->
+                    @can('view users')  
                     <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#Users-icon">
                             <div class="pull-left"><i class="fas fa-users"></i><span class="right-nav-text">{{trans('main_trans.Users')}}</span></div>
@@ -26,8 +27,10 @@
                             <li><a href="{{route('users.index')}}">{{trans('main_trans.Users_list')}}</a></li>
                         </ul>
                     </li>
+                    @endcan
 
                     <!-- Jobs-->
+                    @can('view jobs')                        
                     <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#Jobs-menu">
                             <div class="pull-left"><i class="fa fa-briefcase"></i><span
@@ -41,8 +44,10 @@
 
                         </ul>
                     </li>
+                    @endcan
 
                     <!-- Applications-->
+                    @can('view applications')                        
                     <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#Applications-menu">
                             <div class="pull-left"><i class="fa fa-briefcase"></i><span
@@ -54,8 +59,10 @@
                             <li><a href="{{route('applications.index')}}">{{trans('main_trans.Applications_list')}}</a></li>
                         </ul>
                     </li>
+                    @endcan
 
                     <!-- Categories-->
+                    @can('view categories')                        
                     <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#Categories-menu">
                             <div class="pull-left"><i class="fa fa-briefcase"></i><span
@@ -67,6 +74,8 @@
                             <li><a href="{{route('categories.index')}}">{{trans('main_trans.Categories_list')}}</a></li>
                         </ul>
                     </li>
+                    @endcan
+
 
                 </ul>
             </div>
