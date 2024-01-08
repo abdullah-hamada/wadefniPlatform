@@ -8,6 +8,7 @@ use Illuminate\Notifications\Notifiable;
 use Spatie\Translatable\HasTranslations;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Spatie\Permission\Traits\HasRoles;
+use Spatie\Permission\Models\Role;
 class User extends Authenticatable
 {
     use Notifiable;
@@ -48,6 +49,11 @@ class User extends Authenticatable
     public function jobs()
     {
         return $this->hasMany(Job::class);
+    }
+
+    public function roles()
+    {
+        return $this->belongsToMany(Role::class);
     }
 
 }
