@@ -39,7 +39,9 @@
                             <div class="clearfix"></div>
                         </a>
                         <ul id="Jobs-menu" class="collapse" data-parent="#sidebarnav">
+                            @unless (auth()->user()->hasRole('job_seeker'))
                             <li><a href="{{route('jobs.index')}}">{{trans('main_trans.Jobs_list')}}</a></li>
+                            @endunless
                             <li><a href="{{route('jobs.available')}}">{{trans('main_trans.avaliable_jobs')}}</a></li>
 
                         </ul>
