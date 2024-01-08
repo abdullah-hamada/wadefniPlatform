@@ -46,7 +46,7 @@
                     <div class="col-md-4">
                         <div class="card mb-4 box-shadow">
                             <div class="card-body" style="height:  250px;">
-                                <h5 class="card-title" style="text-align: center;">{{ $Job->title }}</h5>
+                                <h5 class="card-title" style="text-align: center;">{{ Str::words($Job->title, 3, '...') }}</h5>
                                 <h6 class="card-subtitle mb-2 text-muted" style=" text-align: center; ">{{ $Job->employment_type }}</h6>
                                 <p class="card-text" style="text-align: center;"><small>{{ trans('Jobs_trans.salary_range') }} : {{ $Job->salary_range }}</small></p>
                                 <p class="card-text">{{ Str::words($Job->description, 40, '...') }}</p>
