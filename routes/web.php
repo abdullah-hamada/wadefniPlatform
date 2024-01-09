@@ -26,9 +26,7 @@ Route::middleware(['guest'])->group(function () {
     })->name('register');
 });
 
-Route::get('/', function () {
-    return view('home');
-})->name('home');
+Route::get('/', 'HomeController@home')->name('home');
 
 
 // ==============================Translate all pages============================
