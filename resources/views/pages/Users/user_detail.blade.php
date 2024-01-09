@@ -2,13 +2,13 @@
 @section('css')
     @toastr_css
 @section('title')
-{{ trans('main_trans.Main_title') }} | {{trans('Users_trans.User_details')}}
+{{ trans('main_trans.Main_title') }} | {{trans('users_trans.User_details')}}
 @stop
 @endsection
 @section('page-header')
     <!-- breadcrumb -->
 @section('PageTitle')
-    {{trans('Users_trans.User_details')}}
+    {{trans('users_trans.User_details')}}
 @stop
 <!-- breadcrumb -->
 @endsection
@@ -24,7 +24,7 @@
                                 <li class="nav-item">
                                     <a class="nav-link active show" id="home-02-tab" data-toggle="tab" href="#home-02"
                                        role="tab" aria-controls="home-02"
-                                       aria-selected="true">{{trans('Users_trans.User_details')}}</a>
+                                       aria-selected="true">{{trans('users_trans.User_details')}}</a>
                                 </li>
                             </ul>
                             <div class="tab-content">
@@ -33,11 +33,11 @@
                                     <table class="table table-striped table-hover" style="text-align:center">
                                         <tbody>
                                         <tr>
-                                            <th scope="row">{{trans('Users_trans.Name')}}</th>
+                                            <th scope="row">{{trans('users_trans.Name')}}</th>
                                             <td>{{ $User->name }}</td>
-                                            <th scope="row">{{trans('Users_trans.Email')}}</th>
+                                            <th scope="row">{{trans('users_trans.Email')}}</th>
                                             <td>{{$User->email}}</td>
-                                            <th scope="row">{{trans('Users_trans.User_type')}}</th>
+                                            <th scope="row">{{trans('users_trans.User_type')}}</th>
                                             <td>{{$User->user_type}}</td>
                                         </tbody>
                                     </table>

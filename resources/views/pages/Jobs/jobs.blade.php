@@ -2,13 +2,13 @@
 @section('css')
     @toastr_css
 @section('title')
-{{ trans('main_trans.Main_title') }} | {{ trans('Jobs_trans.title_page') }}
+{{ trans('main_trans.Main_title') }} | {{ trans('jobs_trans.title_page') }}
 @stop
 @endsection
 @section('page-header')
 <!-- breadcrumb -->
 @section('PageTitle')
-{{ trans('main_trans.Jobs') }}
+{{ trans('main_trans.jobs') }}
 @stop
 <!-- breadcrumb -->
 @endsection
@@ -38,7 +38,7 @@
             @endif
             @can('create jobs')
             <a href="{{route('jobs.create')}}" class="btn btn-success btn-sm" role="button"
-                                   aria-pressed="true">{{trans('Jobs_trans.add_Job')}}</a>
+                                   aria-pressed="true">{{trans('jobs_trans.add_job')}}</a>
             <br><br>
             @endcan
             <div class="table-responsive">
@@ -47,28 +47,28 @@
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>{{ trans('Jobs_trans.title') }}</th>
-                            <th>{{ trans('Jobs_trans.location') }}</th>
-                            <th>{{ trans('Jobs_trans.employment_type') }}</th>
-                            <th>{{ trans('Jobs_trans.salary_range') }}</th>
-                            <th>{{ trans('Jobs_trans.status') }}</th>
-                            <th>{{ trans('Jobs_trans.Processes') }}</th>
+                            <th>{{ trans('jobs_trans.title') }}</th>
+                            <th>{{ trans('jobs_trans.location') }}</th>
+                            <th>{{ trans('jobs_trans.employment_type') }}</th>
+                            <th>{{ trans('jobs_trans.salary_range') }}</th>
+                            <th>{{ trans('jobs_trans.status') }}</th>
+                            <th>{{ trans('jobs_trans.Processes') }}</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php $i = 0; ?>
-                        @foreach ($Jobs as $Job) 
+                        @foreach ($jobs as $job) 
                             <tr>
                                 <?php $i++; ?>
                                 <td>{{ $i }}</td>
-                                <td>{{ $Job->title }}</td>
-                                <td>{{ $Job->location }}</td>
-                                <td>{{ $Job->employment_type }}</td>
-                                <td>{{ $Job->salary_range }}</td>
-                                @if ($Job->status == 'open')
-                                <td>{{ $Job->status }} &nbsp;<i style="color:green" class="far fa-check-circle" aria-hidden="true"></i></td>
+                                <td>{{ $job->title }}</td>
+                                <td>{{ $job->location }}</td>
+                                <td>{{ $job->employment_type }}</td>
+                                <td>{{ $job->salary_range }}</td>
+                                @if ($job->status == 'open')
+                                <td>{{ $job->status }} &nbsp;<i style="color:green" class="far fa-check-circle" aria-hidden="true"></i></td>
                                 @else
-                                <td>{{ $Job->status }} &nbsp;<i style="color: red" class="far fa-stop-circle" aria-hidden="true"></i></td>
+                                <td>{{ $job->status }} &nbsp;<i style="color: red" class="far fa-stop-circle" aria-hidden="true"></i></td>
                                 @endif
                                 <td>
                                     <div class="dropdown show">
@@ -76,9 +76,9 @@
                                             العمليات
                                         </a>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                            <a class="dropdown-item" href="{{route('jobs.show',$Job->id)}}"><i style="color: #ffc107" class="far fa-eye "></i>&nbsp; {{ trans('Jobs_trans.Show') }}</a>
-                                            <a class="dropdown-item" href="{{route('jobs.edit',$Job->id)}}"><i style="color:green" class="fa fa-edit"></i>&nbsp; {{ trans('Jobs_trans.Edit') }}</a>
-                                            <a class="dropdown-item" data-target="#delete{{ $Job->id }}" data-toggle="modal"><i style="color: red" class="fa fa-trash"></i>&nbsp;  {{ trans('Jobs_trans.Delete') }}</a>
+                                            <a class="dropdown-item" href="{{route('jobs.show',$job->id)}}"><i style="color: #ffc107" class="far fa-eye "></i>&nbsp; {{ trans('jobs_trans.Show') }}</a>
+                                            <a class="dropdown-item" href="{{route('jobs.edit',$job->id)}}"><i style="color:green" class="fa fa-edit"></i>&nbsp; {{ trans('jobs_trans.Edit') }}</a>
+                                            <a class="dropdown-item" data-target="#delete{{ $job->id }}" data-toggle="modal"><i style="color: red" class="fa fa-trash"></i>&nbsp;  {{ trans('jobs_trans.Delete') }}</a>
                                         </div>
                                     </div>
                                 </td>

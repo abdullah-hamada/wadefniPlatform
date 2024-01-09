@@ -143,13 +143,43 @@
                 </div>
             </div>
         </section>
+        <!-- Latest Jobs-->
+        <section class="bg-light text-center ">
+            <div class="container">
+                <h2 class="mb-2"> أحدث الوظائف</h2>
+                <p class="font-weight-light mb-0">رشح نفسك وتقدم ﻷحدث الوظائف</p>
+                <br>
+                <br>
+                <div class="row">
+                    @foreach ($jobs as $job)
+
+                    <div class="col-lg-4">
+                        <div class="card mb-4 box-shadow">
+                            <div class="card-body" style="height:  250px;">
+                                <h5 class="card-title" style="text-align: center;">{{ Str::words($job->title, 3, '...') }}</h5>
+                                <h6 class="card-subtitle mb-2 text-muted" style=" text-align: center; ">{{ $job->employment_type }}</h6>
+                                <p class="card-text" style="text-align: center;"><small>نطاق الراتب : {{ $job->salary_range }}</small></p>
+                                <p class="card-text">{{ Str::words($job->description, 40, '...') }}</p>
+                            </div>
+                            <p class="card-text" style=" color: red; text-align: center; ">ينتهي التقديم في : {{ $job->expires_at }}</p>
+                            <br> <br>
+                            <a href="{{route('applications.create',$job->id)}}" class="btn btn-primary btn-block ">التقدم للوظيفة</a>
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
+            </div>
+        </section>
+
         <!-- Call to Action-->
         <section class="call-to-action text-white text-center" id="signup">
             <div class="container position-relative">
                 <div class="row justify-content-center">
                     <div class="col-xl-6">
                         <h2 class="mb-4">ابحث عن أفضل الوظائف عن بعد في العالم العربي</h2>
-                        <div class="col-auto"><button class="btn btn-primary btn-lg" id="submitButton" type="submit">تصفح الوظائف</button></div>
+                        <div class="col-auto"><button class="btn btn-primary btn-lg" id="submitButton" type="submit">تصفح جميع الوظائف</button></div>
                     </div>
                 </div>
             </div>

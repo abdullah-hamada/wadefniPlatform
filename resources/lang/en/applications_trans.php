@@ -2,7 +2,7 @@
 
 return [
     'title_page' => 'Applications',
-    'apply_for_Job' => 'Apply for Job',
+    'apply_for_job' => 'Apply for Job',
     'Applications_information'=>'Application information',
     'cover_letter' => 'Cover Letter',
     'submit' => 'Submit',

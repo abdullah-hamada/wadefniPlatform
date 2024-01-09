@@ -2,13 +2,13 @@
 @section('css')
     @toastr_css
 @section('title')
-{{ trans('main_trans.Main_title') }} | {{trans('Users_trans.edit_User')}}
+{{ trans('main_trans.Main_title') }} | {{trans('users_trans.edit_User')}}
 @stop
 @endsection
 @section('page-header')
 <!-- breadcrumb -->
 @section('PageTitle')
-    {{trans('Users_trans.edit_User')}}
+    {{trans('users_trans.edit_User')}}
 @stop
 <!-- breadcrumb -->
 @endsection
@@ -32,11 +32,11 @@
                     <form action="{{route('users.update', $User->id)}}" method="POST" autocomplete="off">
                         @method('PUT')
                         @csrf
-                    <h6 style="font-family: 'Cairo', sans-serif;color: blue">{{trans('Users_trans.personal_information')}}</h6><br>
+                    <h6 style="font-family: 'Cairo', sans-serif;color: blue">{{trans('users_trans.personal_information')}}</h6><br>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label>{{trans('Users_trans.Name')}} : <span class="text-danger">*</span></label>
+                                    <label>{{trans('users_trans.Name')}} : <span class="text-danger">*</span></label>
                                     <input value="{{$User->name}}" type="text" name="name"  class="form-control">
                                     <input type="hidden" name="id" value="{{$User->id}}">
                                 </div>
@@ -46,7 +46,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label>{{trans('Users_trans.Email')}} : </label>
+                                    <label>{{trans('users_trans.Email')}} : </label>
                                     <input type="email" value="{{ $User->email }}" name="email" class="form-control" >
                                 </div>
                             </div>
@@ -54,13 +54,13 @@
 
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label>{{trans('Users_trans.password')}} :</label>
+                                    <label>{{trans('users_trans.password')}} :</label>
                                     <input value="{{ $User->password }}" type="password" name="password" class="form-control" >
                                 </div>
                             </div>
                         </div>
 
-                    <button class="btn btn-success btn-sm nextBtn btn-lg pull-right" type="submit">{{trans('Users_trans.submit')}}</button>
+                    <button class="btn btn-success btn-sm nextBtn btn-lg pull-right" type="submit">{{trans('users_trans.submit')}}</button>
                 </form>
 
             </div>

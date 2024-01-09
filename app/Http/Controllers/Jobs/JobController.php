@@ -16,8 +16,8 @@ class JobController extends Controller
     try {
       hasPermission('view jobs');
 
-      $Jobs = Job::all();
-      return view('pages.Jobs.jobs',compact('Jobs'));
+      $jobs = Job::all();
+      return view('pages.Jobs.jobs',compact('jobs'));
 
     } catch (AuthorizationException $e) {
         // User does not have the required permission
@@ -44,16 +44,16 @@ class JobController extends Controller
     try {
       hasPermission('create jobs');
 
-      $Job = new Job();
-      $Job->employer_id = Auth::user()->id;
-      $Job->title = $request->title;
-      $Job->description = $request->description;
-      $Job->location = $request->location;
-      $Job->salary_range = $request->salary_range;
-      $Job->employment_type = $request->employment_type;
-      $Job->status = $request->status;
+      $job = new Job();
+      $job->employer_id = Auth::user()->id;
+      $job->title = $request->title;
+      $job->description = $request->description;
+      $job->location = $request->location;
+      $job->salary_range = $request->salary_range;
+      $job->employment_type = $request->employment_type;
+      $job->status = $request->status;
 
-      $Job->save();
+      $job->save();
 
       DB::commit(); // insert data
       toastr()->success(trans('messages.success'));
@@ -72,8 +72,8 @@ class JobController extends Controller
     try {
       hasPermission('edit jobs');
 
-      $Job =  Job::findOrFail($id);
-      return view('pages.Jobs.edit_job',compact('Job'));
+      $job =  Job::findOrFail($id);
+      return view('pages.jobs.edit_job',compact('job'));
   
     } catch (AuthorizationException $e) {
         // User does not have the required permission
@@ -110,8 +110,8 @@ class JobController extends Controller
     try {
       hasPermission('view jobs');
 
-      $Job = Job::findorfail($id);
-      return view('pages.Jobs.job_detail', compact('Job'));
+      $job = Job::findorfail($id);
+      return view('pages.jobs.job_detail', compact('job'));
     
     } catch (AuthorizationException $e) {
         // User does not have the required permission
@@ -121,9 +121,9 @@ class JobController extends Controller
 
   public function availableJobs()
 	{
-    $Jobs = Job::avaliable()->get();
+    $jobs = Job::avaliable()->get();
     
-    return view('pages.Jobs.available_jobs',compact('Jobs'));
+    return view('pages.Jobs.available_jobs',compact('jobs'));
 	}
 
 
@@ -138,7 +138,7 @@ class JobController extends Controller
     try {
       hasPermission('delete jobs');
 
-      $Jobs = Job::findOrFail($id)->delete();
+      $jobs = Job::findOrFail($id)->delete();
       return redirect()->route('jobs.index');
 
     } catch (AuthorizationException $e) {

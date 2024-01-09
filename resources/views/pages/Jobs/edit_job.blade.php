@@ -2,13 +2,13 @@
 @section('css')
     @toastr_css
 @section('title')
-{{ trans('main_trans.Main_title') }} | {{trans('Jobs_trans.edit_Job')}}
+{{ trans('main_trans.Main_title') }} | {{trans('jobs_trans.edit_job')}}
 @stop
 @endsection
 @section('page-header')
 <!-- breadcrumb -->
 @section('PageTitle')
-    {{trans('Jobs_trans.edit_Job')}}
+    {{trans('jobs_trans.edit_job')}}
 @stop
 <!-- breadcrumb -->
 @endsection
@@ -29,16 +29,16 @@
                     </div>
                 @endif
 
-                    <form action="{{route('jobs.update', $Job->id)}}" method="POST" autocomplete="off">
+                    <form action="{{route('jobs.update', $job->id)}}" method="POST" autocomplete="off">
                         @method('PUT')
                         @csrf
-                     <h6 style="font-family: 'Cairo', sans-serif;color: blue">{{trans('Jobs_trans.jobs_information')}}</h6><br>
+                     <h6 style="font-family: 'Cairo', sans-serif;color: blue">{{trans('jobs_trans.jobs_information')}}</h6><br>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label>{{trans('Jobs_trans.title')}} : <span class="text-danger">*</span></label>
-                                    <input value="{{$Job->title}}" type="text" name="title"  class="form-control">
-                                    <input type="hidden" name="id" value="{{$Job->id}}">
+                                    <label>{{trans('jobs_trans.title')}} : <span class="text-danger">*</span></label>
+                                    <input value="{{$job->title}}" type="text" name="title"  class="form-control">
+                                    <input type="hidden" name="id" value="{{$job->id}}">
                                 </div>
                             </div>
                         </div> 
@@ -46,16 +46,16 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label>{{trans('Jobs_trans.description')}} : </label>
-                                    <input value="{{$Job->description}}" type="text"  name="description" class="form-control" >
+                                    <label>{{trans('jobs_trans.description')}} : </label>
+                                    <input value="{{$job->description}}" type="text"  name="description" class="form-control" >
                                 </div>
                             </div>
 
 
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label>{{trans('Jobs_trans.location')}} : </label>
-                                    <input value="{{$Job->location}}" type="text"  name="location" class="form-control" >
+                                    <label>{{trans('jobs_trans.location')}} : </label>
+                                    <input value="{{$job->location}}" type="text"  name="location" class="form-control" >
                                 </div>
                             </div>
                         </div>
@@ -63,19 +63,19 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label>{{trans('Jobs_trans.salary_range')}} : <span class="text-danger">*</span></label>
-                                    <input value="{{$Job->salary_range}}" type="text" name="salary_range"  class="form-control">
+                                    <label>{{trans('jobs_trans.salary_range')}} : <span class="text-danger">*</span></label>
+                                    <input value="{{$job->salary_range}}" type="text" name="salary_range"  class="form-control">
                                 </div>
                             </div>
 
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label>{{trans('Jobs_trans.employment_type')}} : <span class="text-danger">*</span></label>
-                                    <select value="{{$Job->employment_type}}" name="employment_type" class="custom-select">
+                                    <label>{{trans('jobs_trans.employment_type')}} : <span class="text-danger">*</span></label>
+                                    <select value="{{$job->employment_type}}" name="employment_type" class="custom-select">
                                         <option value="#" selected disabled>الرجاء الاختيار</option>
-                                        <option value="full-time" {{ $Job->employment_type == 'full-time' ? 'selected' : '' }}>Full-time</option>
-                                        <option value="part-time" {{ $Job->employment_type == 'part-time' ? 'selected' : '' }}>Part-time</option>
-                                        <option value="contract" {{ $Job->employment_type == 'contract' ? 'selected' : '' }}>Contract</option>
+                                        <option value="full-time" {{ $job->employment_type == 'full-time' ? 'selected' : '' }}>Full-time</option>
+                                        <option value="part-time" {{ $job->employment_type == 'part-time' ? 'selected' : '' }}>Part-time</option>
+                                        <option value="contract" {{ $job->employment_type == 'contract' ? 'selected' : '' }}>Contract</option>
                                     </select>
                                 </div>
                             </div>
@@ -84,17 +84,17 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label>{{trans('Jobs_trans.status')}} : <span class="text-danger">*</span></label>
-                                    <select value="{{$Job->status}}" name="status" class="custom-select">
+                                    <label>{{trans('jobs_trans.status')}} : <span class="text-danger">*</span></label>
+                                    <select value="{{$job->status}}" name="status" class="custom-select">
                                         <option value="#" selected disabled>الرجاء الاختيار</option>
-                                        <option value="open" {{ $Job->status == 'open' ? 'selected' : '' }}>Open</option>
-                                        <option value="closed" {{ $Job->status == 'closed' ? 'selected' : '' }}>Closed</option>
+                                        <option value="open" {{ $job->status == 'open' ? 'selected' : '' }}>Open</option>
+                                        <option value="closed" {{ $job->status == 'closed' ? 'selected' : '' }}>Closed</option>
                                     </select>
                                 </div>
                             </div>
                         </div>
 
-                        <button class="btn btn-success btn-sm nextBtn btn-lg pull-right" type="submit">{{trans('Jobs_trans.submit')}}</button>
+                        <button class="btn btn-success btn-sm nextBtn btn-lg pull-right" type="submit">{{trans('jobs_trans.submit')}}</button>
                 </form>
 
             </div>

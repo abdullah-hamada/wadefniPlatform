@@ -2,7 +2,7 @@
 @section('css')
     @toastr_css
 @section('title')
-    {{ trans('Applications_trans.title_page') }}
+    {{ trans('applications_trans.title_page') }}
 @stop
 @endsection
 @section('page-header')
@@ -44,10 +44,10 @@
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>{{ trans('Jobs_trans.title') }}</th>
-                            <th>{{ trans('Applications_trans.name') }}</th>
-                            <th>{{ trans('Applications_trans.company_name') }}</th>
-                            <th>{{ trans('Applications_trans.Processes') }}</th>
+                            <th>{{ trans('jobs_trans.title') }}</th>
+                            <th>{{ trans('applications_trans.name') }}</th>
+                            <th>{{ trans('applications_trans.company_name') }}</th>
+                            <th>{{ trans('applications_trans.Processes') }}</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -60,7 +60,7 @@
                                 <td>{{ $Application->applicant->name }}</td>
                                 <td>{{ $Application->job->employer->name }}</td>
                                 <td>
-                                    <a class="dropdown-item" href="{{route('applications.show',$Application->id)}}"><i style="color: #ffc107" class="far fa-eye "></i>&nbsp; {{ trans('Applications_trans.Show') }}</a>
+                                    <a class="dropdown-item" href="{{route('applications.show',$Application->id)}}"><i style="color: #ffc107" class="far fa-eye "></i>&nbsp; {{ trans('applications_trans.Show') }}</a>
                                 </td>
                             </tr>
                         @endforeach

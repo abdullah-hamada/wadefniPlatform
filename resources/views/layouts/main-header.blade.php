@@ -59,7 +59,7 @@ header start-->
             </a>
             <div class="dropdown-menu dropdown-menu-right dropdown-big dropdown-notifications">
                 <div class="dropdown-header notifications">
-                    <strong>{{trans('Sidebar_trans.Notifications')}}</strong>
+                    <strong>{{trans('sidebar_trans.Notifications')}}</strong>
                     <span class="badge badge-pill badge-warning">05</span>
                 </div>
                 <div class="dropdown-divider"></div>
@@ -109,7 +109,7 @@ header start-->
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="{{ route('users.show',Auth::user()->id ) }}"><i class="text-warning ti-user"></i>Profile</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();"><i class="text-danger ti-unlock"></i>{{ __('Sidebar_trans.Logoff') }}</a>
+                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();"><i class="text-danger ti-unlock"></i>{{ __('sidebar_trans.Logoff') }}</a>
                  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                   @csrf
                 </form>

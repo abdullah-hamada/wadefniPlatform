@@ -32,15 +32,15 @@
                     <!-- Jobs-->
                     @can('view jobs')                        
                     <li>
-                        <a href="javascript:void(0);" data-toggle="collapse" data-target="#Jobs-menu">
+                        <a href="javascript:void(0);" data-toggle="collapse" data-target="#jobs-menu">
                             <div class="pull-left"><i class="fa fa-briefcase"></i><span
-                                    class="right-nav-text">{{trans('main_trans.Jobs')}}</span></div>
+                                    class="right-nav-text">{{trans('main_trans.jobs')}}</span></div>
                             <div class="pull-right"><i class="ti-plus"></i></div>
                             <div class="clearfix"></div>
                         </a>
-                        <ul id="Jobs-menu" class="collapse" data-parent="#sidebarnav">
+                        <ul id="jobs-menu" class="collapse" data-parent="#sidebarnav">
                             @unless (auth()->user()->hasRole('job_seeker'))
-                            <li><a href="{{route('jobs.index')}}">{{trans('main_trans.Jobs_list')}}</a></li>
+                            <li><a href="{{route('jobs.index')}}">{{trans('main_trans.jobs_list')}}</a></li>
                             @endunless
                             <li><a href="{{route('jobs.available')}}">{{trans('main_trans.avaliable_jobs')}}</a></li>
 

@@ -2,13 +2,13 @@
 @section('css')
     @toastr_css
 @section('title')
-    {{trans('Applications_trans.apply_for_Job')}}
+    {{trans('applications_trans.apply_for_job')}}
 @stop
 @endsection
 @section('page-header')
 <!-- breadcrumb -->
 @section('PageTitle')
-    {{trans('Applications_trans.apply_for_Job')}}
+    {{trans('applications_trans.apply_for_job')}}
 @stop
 
 
@@ -21,42 +21,42 @@
         <div class="col-md-12 mb-30">
             <div class="card card-statistics h-100">
                 <div class="card-body">
-                    <h6 style="font-family: 'Cairo', sans-serif;color: blue">{{trans('Jobs_trans.jobs_information')}}</h6><br>
+                    <h6 style="font-family: 'Cairo', sans-serif;color: blue">{{trans('jobs_trans.jobs_information')}}</h6><br>
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label>{{trans('Jobs_trans.title')}}</label>
-                                <input value="{{$Job->title}}"  disabled type="text" name="title"  class="form-control">
+                                <label>{{trans('jobs_trans.title')}}</label>
+                                <input value="{{$job->title}}"  disabled type="text" name="title"  class="form-control">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label>{{trans('Jobs_trans.location')}}</label>
-                                <input value="{{$Job->location}}" disabled type="text" name="location"  class="form-control">
+                                <label>{{trans('jobs_trans.location')}}</label>
+                                <input value="{{$job->location}}" disabled type="text" name="location"  class="form-control">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label>{{trans('Jobs_trans.salary_range')}}</label>
-                                <input value="{{$Job->salary_range}}" disabled type="text" name="salary_range"  class="form-control">
+                                <label>{{trans('jobs_trans.salary_range')}}</label>
+                                <input value="{{$job->salary_range}}" disabled type="text" name="salary_range"  class="form-control">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label>{{trans('Jobs_trans.employment_type')}}</label>
-                                <input value="{{$Job->employment_type}}" disabled type="text" name="employment_type"  class="form-control">
+                                <label>{{trans('jobs_trans.employment_type')}}</label>
+                                <input value="{{$job->employment_type}}" disabled type="text" name="employment_type"  class="form-control">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label>{{trans('Jobs_trans.posted_at')}}</label>
-                                <input value="{{ \Carbon\Carbon::parse($Job->posted_at)->diffForHumans() }}" style="color: blue" type="text" name="posted_at" class="form-control">
+                                <label>{{trans('jobs_trans.posted_at')}}</label>
+                                <input value="{{ \Carbon\Carbon::parse($job->posted_at)->diffForHumans() }}" style="color: blue" type="text" name="posted_at" class="form-control">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label>{{trans('Jobs_trans.expires_at')}}</label>
-                                <input value="{{$Job->expires_at}}"  style="color: red" type="text" name="expires_at"  class="form-control">
+                                <label>{{trans('jobs_trans.expires_at')}}</label>
+                                <input value="{{$job->expires_at}}"  style="color: red" type="text" name="expires_at"  class="form-control">
                             </div>
                         </div>
                     </div>
@@ -75,13 +75,13 @@
 
                     <form method="post"  action="{{ route('applications.store') }}" autocomplete="off" enctype="multipart/form-data">
                         @csrf
-                        <h6 style="font-family: 'Cairo', sans-serif;color: blue">{{trans('Applications_trans.Applications_information')}}</h6><br>
+                        <h6 style="font-family: 'Cairo', sans-serif;color: blue">{{trans('applications_trans.Applications_information')}}</h6><br>
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <input type="hidden" name="job_id" value="{{$Job->id}}">
-                                        <input type="hidden" name="employer_id" value="{{$Job->employer_id}}">
-                                        <label>{{trans('Applications_trans.cover_letter')}} : <span class="text-danger">*</span></label>
+                                        <input type="hidden" name="job_id" value="{{$job->id}}">
+                                        <input type="hidden" name="employer_id" value="{{$job->employer_id}}">
+                                        <label>{{trans('applications_trans.cover_letter')}} : <span class="text-danger">*</span></label>
                                         <textarea name="cover_letter" class="form-control" id="exampleFormControlTextarea1" rows="10"></textarea>
                                     </div>
                                 </div>
@@ -89,14 +89,14 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label>{{trans('Applications_trans.attachements')}} : <span class="text-danger">*</span></label>
+                                        <label>{{trans('applications_trans.attachements')}} : <span class="text-danger">*</span></label>
                                         <br><br>
                                         <input type="file" class="form-control-file" id="exampleFormControlFile1">
                                     </div>
                                 </div>
                             </div>
                             <br>
-                        <button class="btn btn-success btn-block nextBtn btn-lg pull-right" type="submit">{{trans('Applications_trans.submit')}}</button>
+                        <button class="btn btn-success btn-block nextBtn btn-lg pull-right" type="submit">{{trans('applications_trans.submit')}}</button>
                     </form>
                     <br>
                 </div>

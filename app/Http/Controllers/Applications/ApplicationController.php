@@ -20,9 +20,9 @@ class ApplicationController extends Controller
 
 	public function create($id)
 	{
-    	$Job =  Job::findOrFail($id);
+    	$job =  Job::findOrFail($id);
 
-		return view('pages.Applications.add_application', compact('Job'));
+		return view('pages.Applications.add_application', compact('job'));
 	}
 
 	public function store(Request $request)
@@ -38,7 +38,7 @@ class ApplicationController extends Controller
 
 			DB::commit(); // insert data
 			toastr()->success(trans('messages.success'));
-			return redirect()->route('Jobs.index');
+			return redirect()->route('jobs.index');
 
 		}
 

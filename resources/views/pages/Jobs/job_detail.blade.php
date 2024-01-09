@@ -2,13 +2,13 @@
 @section('css')
     @toastr_css
 @section('title')
-{{ trans('main_trans.Main_title') }} | {{trans('Jobs_trans.jobs_information')}}
+{{ trans('main_trans.Main_title') }} | {{trans('jobs_trans.jobs_information')}}
 @stop
 @endsection
 @section('page-header')
     <!-- breadcrumb -->
 @section('PageTitle')
-    {{trans('Jobs_trans.jobs_information')}}
+    {{trans('jobs_trans.jobs_information')}}
 @stop
 <!-- breadcrumb -->
 @endsection
@@ -23,7 +23,7 @@
                             <ul class="nav nav-tabs" role="tablist">
                                 <li class="nav-item">
                                        <a class="nav-link active show" href="{{route('applications.create')}}" class="btn btn-success btn-sm" role="button"
-                                   aria-pressed="true">{{trans('Jobs_trans.Apply')}}</a>
+                                   aria-pressed="true">{{trans('jobs_trans.Apply')}}</a>
                                 </li>
                             </ul>
                             <div class="tab-content">
@@ -32,20 +32,20 @@
                                     <table class="table table-striped table-hover" style="text-align:center">
                                         <tbody>
                                         <tr>
-                                            <th scope="row">{{trans('Jobs_trans.title')}}</th>
-                                            <td>{{ $Job->title }}</td>
-                                            <th scope="row">{{trans('Jobs_trans.description')}}</th>
-                                            <td>{{$Job->description}}</td>
-                                            <th scope="row">{{trans('Jobs_trans.location')}}</th>
-                                            <td>{{$Job->location}}</td>
+                                            <th scope="row">{{trans('jobs_trans.title')}}</th>
+                                            <td>{{ $job->title }}</td>
+                                            <th scope="row">{{trans('jobs_trans.description')}}</th>
+                                            <td>{{$job->description}}</td>
+                                            <th scope="row">{{trans('jobs_trans.location')}}</th>
+                                            <td>{{$job->location}}</td>
                                         </tr>
                                         <tr>
-                                            <th scope="row">{{trans('Jobs_trans.salary_range')}}</th>
-                                            <td>{{ $Job->salary_range }}</td>
-                                            <th scope="row">{{trans('Jobs_trans.employment_type')}}</th>
-                                            <td>{{$Job->employment_type}}</td>
-                                            <th scope="row">{{trans('Jobs_trans.status')}}</th>
-                                            <td>{{$Job->status}}</td>
+                                            <th scope="row">{{trans('jobs_trans.salary_range')}}</th>
+                                            <td>{{ $job->salary_range }}</td>
+                                            <th scope="row">{{trans('jobs_trans.employment_type')}}</th>
+                                            <td>{{$job->employment_type}}</td>
+                                            <th scope="row">{{trans('jobs_trans.status')}}</th>
+                                            <td>{{$job->status}}</td>
                                         </tr>
                                         </tbody>
                                     </table>

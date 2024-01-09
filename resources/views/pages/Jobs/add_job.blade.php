@@ -2,13 +2,13 @@
 @section('css')
     @toastr_css
 @section('title')
-{{ trans('main_trans.Main_title') }} | {{trans('Jobs_trans.add_Job')}}
+{{ trans('main_trans.Main_title') }} | {{trans('jobs_trans.add_job')}}
 @stop
 @endsection
 @section('page-header')
 <!-- breadcrumb -->
 @section('PageTitle')
-    {{trans('Jobs_trans.add_Job')}}
+    {{trans('jobs_trans.add_job')}}
 @stop
 
 
@@ -34,11 +34,11 @@
 
                 <form method="post"  action="{{ route('jobs.store') }}" autocomplete="off" enctype="multipart/form-data">
                     @csrf
-                    <h6 style="font-family: 'Cairo', sans-serif;color: blue">{{trans('Jobs_trans.jobs_information')}}</h6><br>
+                    <h6 style="font-family: 'Cairo', sans-serif;color: blue">{{trans('jobs_trans.jobs_information')}}</h6><br>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label>{{trans('Jobs_trans.title')}} : <span class="text-danger">*</span></label>
+                                    <label>{{trans('jobs_trans.title')}} : <span class="text-danger">*</span></label>
                                     <input  type="text" name="title"  class="form-control">
                                 </div>
                             </div>
@@ -47,7 +47,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label>{{trans('Jobs_trans.description')}} : </label>
+                                    <label>{{trans('jobs_trans.description')}} : </label>
                                     <input type="text"  name="description" class="form-control" >
                                 </div>
                             </div>
@@ -55,7 +55,7 @@
 
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label>{{trans('Jobs_trans.location')}} : </label>
+                                    <label>{{trans('jobs_trans.location')}} : </label>
                                     <input type="text"  name="location" class="form-control" >
                                 </div>
                             </div>
@@ -64,14 +64,14 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label>{{trans('Jobs_trans.salary_range')}} : <span class="text-danger">*</span></label>
+                                    <label>{{trans('jobs_trans.salary_range')}} : <span class="text-danger">*</span></label>
                                     <input  type="text" name="salary_range"  class="form-control">
                                 </div>
                             </div>
 
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label>{{trans('Jobs_trans.employment_type')}} : <span class="text-danger">*</span></label>
+                                    <label>{{trans('jobs_trans.employment_type')}} : <span class="text-danger">*</span></label>
                                     <select name="employment_type" class="custom-select">
                                         <option value="#" selected disabled>الرجاء الاختيار</option>
                                         <option value="full-time">Full-time</option>
@@ -85,7 +85,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label>{{trans('Jobs_trans.status')}} : <span class="text-danger">*</span></label>
+                                    <label>{{trans('jobs_trans.status')}} : <span class="text-danger">*</span></label>
                                     <select name="status" class="custom-select">
                                         <option value="#" selected disabled>الرجاء الاختيار</option>
                                         <option value="open">Open</option>
@@ -95,7 +95,7 @@
                             </div>
                         </div>
 
-                    <button class="btn btn-success btn-sm nextBtn btn-lg pull-right" type="submit">{{trans('Jobs_trans.submit')}}</button>
+                    <button class="btn btn-success btn-sm nextBtn btn-lg pull-right" type="submit">{{trans('jobs_trans.submit')}}</button>
                 </form>
 
             </div>

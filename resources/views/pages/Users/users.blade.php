@@ -2,7 +2,7 @@
 @section('css')
     @toastr_css
 @section('title')
-{{ trans('main_trans.Main_title') }} | {{ trans('Users_trans.title_page') }}
+{{ trans('main_trans.Main_title') }} | {{ trans('users_trans.title_page') }}
 @stop
 @endsection
 @section('page-header')
@@ -38,7 +38,7 @@
             @endif
             
             <a href="{{route('users.create')}}" class="btn btn-success btn-sm" role="button"
-                                   aria-pressed="true">{{trans('Users_trans.add_User')}}</a>
+                                   aria-pressed="true">{{trans('users_trans.add_User')}}</a>
             <br><br>
 
             <div class="table-responsive">
@@ -47,9 +47,9 @@
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>{{ trans('Users_trans.Name') }}</th>
-                            <th>{{ trans('Users_trans.Email') }}</th>
-                            <th>{{ trans('Users_trans.Processes') }}</th>
+                            <th>{{ trans('users_trans.Name') }}</th>
+                            <th>{{ trans('users_trans.Email') }}</th>
+                            <th>{{ trans('users_trans.Processes') }}</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -63,10 +63,10 @@
                                 {{-- <td>
                                     <button type="button" class="btn btn-info btn-sm" data-toggle="modal"
                                         data-target="#edit{{ $User->id }}"
-                                        title="{{ trans('Users_trans.Edit') }}"><i class="fa fa-edit"></i></button>
+                                        title="{{ trans('users_trans.Edit') }}"><i class="fa fa-edit"></i></button>
                                     <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
                                         data-target="#delete{{ $User->id }}"
-                                        title="{{ trans('Users_trans.Delete') }}"><i
+                                        title="{{ trans('users_trans.Delete') }}"><i
                                             class="fa fa-trash"></i></button>
                                 </td> --}}
                                 <td>
@@ -75,9 +75,9 @@
                                             العمليات
                                         </a>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                            <a class="dropdown-item" href="{{route('users.show',$User->id)}}"><i style="color: #ffc107" class="far fa-eye "></i>&nbsp; {{ trans('Users_trans.Show') }}</a>
-                                            <a class="dropdown-item" href="{{route('users.edit',$User->id)}}"><i style="color:green" class="fa fa-edit"></i>&nbsp; {{ trans('Users_trans.Edit') }}</a>
-                                            <a class="dropdown-item" data-target="#delete{{ $User->id }}" data-toggle="modal"><i style="color: red" class="fa fa-trash"></i>&nbsp;  {{ trans('Users_trans.Delete') }}</a>
+                                            <a class="dropdown-item" href="{{route('users.show',$User->id)}}"><i style="color: #ffc107" class="far fa-eye "></i>&nbsp; {{ trans('users_trans.Show') }}</a>
+                                            <a class="dropdown-item" href="{{route('users.edit',$User->id)}}"><i style="color:green" class="fa fa-edit"></i>&nbsp; {{ trans('users_trans.Edit') }}</a>
+                                            <a class="dropdown-item" data-target="#delete{{ $User->id }}" data-toggle="modal"><i style="color: red" class="fa fa-trash"></i>&nbsp;  {{ trans('users_trans.Delete') }}</a>
                                         </div>
                                     </div>
                                 </td>
